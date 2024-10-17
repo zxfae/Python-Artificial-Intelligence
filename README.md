@@ -1,8 +1,8 @@
-# Welcome to the Zone 01 Python AI Pool! 🏊‍♂️🐍🧠
+# Welcome to Python AI courses! 🏊‍♂️🐍🧠
 
 Hey there, future AI wizards! Ready to dive into the deep end of artificial intelligence?
 
-## What's this pool all about?
+## What's this course all about?
 
 Picture this: you're about to embark on an epic journey into the world of AI, armed with Python and a boatload of curiosity.
 
