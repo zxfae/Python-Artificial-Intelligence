@@ -39,7 +39,7 @@ Here’s the roadmap for your AI adventure, with links to each module and its re
 
 ### [Module 1: NumPy](./Numpy) 📐
 
-NumPy is like the LEGO of AI. It's time to become BFFs with matrices, vectors, and arrays. Check out the [NumPy folder](./numpy) for tutorials and exercises that'll help you master it.
+NumPy is like the LEGO of AI. It's time to become BFFs with matrices, vectors, and arrays. Check out the [NumPy folder](./Numpy) for tutorials and exercises that'll help you master it.
 
 - **Learn the basics**: how to install and import NumPy
 - **Master operations**: slicing, reshaping, broadcasting
@@ -50,7 +50,7 @@ NumPy is like the LEGO of AI. It's time to become BFFs with matrices, vectors, a
 
 ### [Module 2: Pandas](./Pandas) 📊
 
-Meet Pandas, your personal data organizer. Pandas will help you handle and manipulate large datasets with ease. Dive into the [Pandas folder](./pandas) to transform raw data into clean and meaningful insights.
+Meet Pandas, your personal data organizer. Pandas will help you handle and manipulate large datasets with ease. Dive into the [Pandas folder](./Pandas) to transform raw data into clean and meaningful insights.
 
 - **DataFrames 101**: loading, viewing, and manipulating datasets
 - **Data Cleaning**: dealing with missing data, duplicates, and outliers
@@ -61,7 +61,7 @@ Meet Pandas, your personal data organizer. Pandas will help you handle and manip
 
 ### [Module 3: Data Wrangling](./Data-Wrangling) 🧹
 
-Data wrangling is the art of preparing messy datasets for analysis. The [Data Wrangling folder](./data-wrangling) will guide you through the techniques to transform unstructured data into something usable.
+Data wrangling is the art of preparing messy datasets for analysis. The [Data Wrangling folder](./Data-Wrangling) will guide you through the techniques to transform unstructured data into something usable.
 
 - **Reshaping data**: pivot tables, melting, and stacking
 - **Handling missing values**: imputation techniques
@@ -71,7 +71,7 @@ Data wrangling is the art of preparing messy datasets for analysis. The [Data Wr
 
 ### [Module 4: Visualizations](./Visualizations) 📊🎨
 
-Numbers are great, but visualizations make data come alive. In the [Visualizations folder](./visualizations), you’ll learn how to create stunning graphs and charts using Python libraries like Matplotlib and Seaborn.
+Numbers are great, but visualizations make data come alive. In the [Visualizations folder](./Visualizations), you’ll learn how to create stunning graphs and charts using Python libraries like Matplotlib and Seaborn.
 
 - **Matplotlib basics**: line plots, scatter plots, and bar charts
 - **Seaborn magic**: heatmaps, pair plots, and categorical data visualization
