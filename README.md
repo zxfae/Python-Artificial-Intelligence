@@ -2,6 +2,21 @@
 
 Hey there, future AI wizards! Ready to dive into the deep end of artificial intelligence?
 
+
+## Table of Contents
+
+- [Welcome to Python AI Courses! 🏊‍♂️🐍🧠](#welcome-to-python-ai-courses-️)
+  - [Table of Contents](#table-of-contents)
+  - [What's this course all about?](#whats-this-course-all-about)
+  - [Rules of the game](#rules-of-the-game)
+  - [On the menu: Fun and brain-bubbling excitement!](#on-the-menu-fun-and-brain-bubbling-excitement)
+    - [Module 1: NumPy 📐](#module-1-numpy-)
+    - [Module 2: Pandas 📊](#module-2-pandas-)
+    - [Module 3: Data Wrangling 🧹](#module-3-data-wrangling-)
+    - [Module 4: Visualizations 📊🎨](#module-4-visualizations-)
+
+---
+
 ## What's this course all about?
 
 Picture this: you're about to embark on an epic journey into the world of AI, armed with Python and a boatload of curiosity.
