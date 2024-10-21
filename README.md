@@ -1,4 +1,4 @@
-# Welcome to Python AI courses! 🏊‍♂️🐍🧠
+# Welcome to Python AI Courses! 🏊‍♂️🐍🧠
 
 Hey there, future AI wizards! Ready to dive into the deep end of artificial intelligence?
 
@@ -18,35 +18,48 @@ Alright, let's roll up our sleeves and dive into the AI deep end. It's going to 
 
 Good luck, and may the force of deep learning be with you! 🚀🤖
 
-## On the menu: fun and brain-bubbling excitement!
-### Module 1 (ex0): NumPy, or how to become BFFs with matrices
+## On the menu: Fun and brain-bubbling excitement!
 
-First stop: NumPy. It's kind of like the LEGO of AI. At first, you might wonder, "What's the deal with these weird bricks?" But before you know it, you'll be building entire castles!
+Here’s the roadmap for your AI adventure, with links to each module and its respective folder for more details:
 
-#### NumPy, what's that?
+### [Module 1: NumPy](./Numpy) 📐
 
-NumPy is about to become your new best friend for juggling numbers faster than your old school calculator. It's the magical toolbox of every self-respecting data scientist.
+NumPy is like the LEGO of AI. It's time to become BFFs with matrices, vectors, and arrays. Check out the [NumPy folder](./numpy) for tutorials and exercises that'll help you master it.
 
-#### Why do we love NumPy?
+- **Learn the basics**: how to install and import NumPy
+- **Master operations**: slicing, reshaping, broadcasting
+- **Work with arrays**: 1D, 2D, and multi-dimensional
+- **Speed up your code**: vectorized operations and more
 
-- It's lightning fast ⚡
-- It makes you look like a math genius (even if you hated it in high school)
-- It's the foundation for doing AI without losing your mind
+---
 
-#### How do we get started?
+### [Module 2: Pandas](./Pandas) 📊
 
-Easy peasy! Just a quick:
+Meet Pandas, your personal data organizer. Pandas will help you handle and manipulate large datasets with ease. Dive into the [Pandas folder](./pandas) to transform raw data into clean and meaningful insights.
 
-```
-pip install numpy
-```
+- **DataFrames 101**: loading, viewing, and manipulating datasets
+- **Data Cleaning**: dealing with missing data, duplicates, and outliers
+- **Grouping and Aggregating**: summarizing your data effectively
+- **Merging and Joining**: combine data from multiple sources
 
-And then, in your code:
+---
 
-```python
-import numpy as np
-```
+### [Module 3: Data Wrangling](./Data-Wrangling) 🧹
 
-Boom! You're all set to conquer the world of data!
+Data wrangling is the art of preparing messy datasets for analysis. The [Data Wrangling folder](./data-wrangling) will guide you through the techniques to transform unstructured data into something usable.
 
-## To be continued...
+- **Reshaping data**: pivot tables, melting, and stacking
+- **Handling missing values**: imputation techniques
+- **Feature Engineering**: creating new features for better models
+
+---
+
+### [Module 4: Visualizations](./Visualizations) 📊🎨
+
+Numbers are great, but visualizations make data come alive. In the [Visualizations folder](./visualizations), you’ll learn how to create stunning graphs and charts using Python libraries like Matplotlib and Seaborn.
+
+- **Matplotlib basics**: line plots, scatter plots, and bar charts
+- **Seaborn magic**: heatmaps, pair plots, and categorical data visualization
+- **Advanced plots**: 3D plots, subplots, and customization tips
+
+---
