@@ -45,29 +45,7 @@
 ## R² score
 ### Formula R² Score - Sklearn metrics
 #### R² = 1 - (SS_res / SS_tot)
-
-
-Example :
-```python
-y_real = [10,2,21,34,3]
-y_pred = [11,43,7,4,1]
-```
-1. n = (n observations) 5
-2. y_real = real values
-3. y_pred = predicts values
-
 #### Calcul
-MSE = (1/5) * [
-*  (11 - 10)² = 1² = 1 +
-*  (43 - 2)² = 41² = 1681 +
-*  (7 - 21)² = -14² = 196 +
-*  (4 - 34)² = -30² = 900 +
-*  (1 - 3)² = -2² = 4
-  
-]
-
-MSE = (1/5) * 2782 = 556.4
-
  #### R² = 1 - (SS_res / SS_tot)
 
 Example :
