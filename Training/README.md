@@ -41,6 +41,34 @@
       - [Accuracy = (TP + TN) / (TP + TN + FP + FN)](#accuracy--tp--tn--tp--tn--fp--fn)
   - [Components](#components)
   - [Example](#example)
+  - [Precision](#precision)
+    - [Formula Precisions - Sklearn metrics](#formula-precisions---sklearn-metrics)
+      - [Precision = (TP) / (TP + FP)](#precision--tp--tp--fp)
+  - [Components](#components-1)
+  - [Example](#example-1)
+  - [Recall](#recall)
+    - [Formula Recall - Sklearn metrics](#formula-recall---sklearn-metrics)
+      - [Precision = (TP) / (TP + FN)](#precision--tp--tp--fn)
+  - [Components](#components-2)
+  - [Example](#example-2)
+  - [F1\_score](#f1_score)
+    - [Formula F1\_score - Sklearn metrics](#formula-f1_score---sklearn-metrics)
+      - [Precision = 2 \* (Precision \* Recall) / (Precision + Recall)](#precision--2--precision--recall--precision--recall)
+  - [Components](#components-3)
+  - [Example](#example-3)
+  - [ROC AUC](#roc-auc)
+    - [Formula ROC AUC - Sklearn metrics](#formula-roc-auc---sklearn-metrics)
+      - [AUC = ∫ TPR d(FPR)](#auc---tpr-dfpr)
+  - [Components](#components-4)
+  - [Example](#example-4)
+  - [Interpretation](#interpretation)
+- [Classification Metrics Guide](#classification-metrics-guide)
+  - [Metrics Comparison Table](#metrics-comparison-table)
+  - [Quick Selection Guide](#quick-selection-guide)
+    - [Choose based on context:](#choose-based-on-context)
+    - [Practical Rules:](#practical-rules)
+    - [Common Values Interpretation:](#common-values-interpretation)
+    - [Selection Formula:](#selection-formula)
 # Regression
 ## R² score
 ### Formula R² Score - Sklearn metrics
@@ -221,6 +249,7 @@ MAE = (1/5) * (9) = 1.8
 3. Special attention needed for cases with large errors:
   - Prediction of 11 for actual value of 4
   - Prediction of 4 for actual value of 12
+
 # Classification
 
 ## ACCURACY
@@ -256,3 +285,199 @@ CopyAccuracy = (TP + TN) / Total
         = (2 + 2) / 7
         = 4/7
         ≈ 0.571 (57.1%)
+```
+
+## Precision
+### Formula Precisions - Sklearn metrics
+ #### Precision = (TP) / (TP + FP)
+
+Copy
+## Components
+- **TP (True Positive)**: Predicted 1, actual 1
+- **TN (True Negative)**: Predicted 0, actual 0  
+- **FP (False Positive)**: Predicted 1, actual 0
+- **FN (False Negative)**: Predicted 0, actual 1
+
+## Example
+```python
+y_pred = [0, 1, 0, 1, 0, 1, 0]
+y_true = [0, 0, 1, 1, 1, 1, 0]
+
+Analysis:
+IndexPredictedActualResult000TN110FP201FN311
+TP401FN511TP600TN
+
+Count:
+
+TP = 2 (positions 3, 5)
+TN = 2 (positions 0, 6)
+FP = 1 (position 1)
+FN = 2 (positions 2, 4)
+
+Calculation:
+CopyPrecision = (TP) / (TP + FP)
+        = (2) / 3
+        ≈ 0.66 (66%)
+```
+## Recall
+### Formula Recall - Sklearn metrics
+ #### Precision = (TP) / (TP + FN)
+
+Copy
+## Components
+- **TP (True Positive)**: Predicted 1, actual 1
+- **TN (True Negative)**: Predicted 0, actual 0  
+- **FP (False Positive)**: Predicted 1, actual 0
+- **FN (False Negative)**: Predicted 0, actual 1
+
+## Example
+```python
+y_pred = [0, 1, 0, 1, 0, 1, 0]
+y_true = [0, 0, 1, 1, 1, 1, 0]
+
+Analysis:
+IndexPredictedActualResult000TN110FP201FN311
+TP401FN511TP600TN
+
+Count:
+
+TP = 2 (positions 3, 5)
+TN = 2 (positions 0, 6)
+FP = 1 (position 1)
+FN = 2 (positions 2, 4)
+
+Calculation:
+CopyRecall = (TP) / (TP + FN)
+        = (2) / 4
+        ≈ 0.5 (50%)
+```
+
+## F1_score
+### Formula F1_score - Sklearn metrics
+ #### Precision = 2 * (Precision * Recall) / (Precision + Recall)
+
+Copy
+## Components
+- **TP (True Positive)**: Predicted 1, actual 1
+- **TN (True Negative)**: Predicted 0, actual 0  
+- **FP (False Positive)**: Predicted 1, actual 0
+- **FN (False Negative)**: Predicted 0, actual 1
+
+## Example
+```python
+Calc = 2 * (0.66 * 0.5) / (0.66 + 0.5)
+Calc = 0.569(56,9%)
+```
+## ROC AUC
+### Formula ROC AUC - Sklearn metrics
+
+#### AUC = ∫ TPR d(FPR)
+- TPR (True Positive Rate) = TP / (TP + FN)
+- FPR (False Positive Rate) = FP / (FP + TN)
+
+## Components
+- **TPR (True Positive Rate)**:  Recall
+- **FPR (False Positive Rate)**: Also called 1 - Specificity
+- **Thresholds**: Values between 0 and 1 used to convert probabilities to classes
+- **Area Under Curve**: Integral of the ROC curve (area between curve and x-axis)
+
+
+## Example
+```python
+fpr = [0, 0.2, 0.4, 0.6, 0.8, 1]  
+tpr = [0, 0.6, 0.8, 0.9, 0.95, 1] 
+
+auc = 0
+for i in range(len(fpr)-1):
+    width = fpr[i+1] - fpr[i]
+    height = (tpr[i+1] + tpr[i]) / 2
+    auc += width * height
+
+Result: AUC = 0.85 (85%)
+```
+
+## Interpretation 
+1. AUC = 1.0: Perfect classification
+2. AUC = 0.5: Random classification
+3. AUC > 0.9: Excellent
+4. AUC > 0.8: Good
+5. AUC > 0.7: Acceptable
+6. AUC < 0.6: Poor
+
+# Classification Metrics Guide
+
+## Metrics Comparison Table
+
+| Metric | When to Use | Advantages | Disadvantages | Use Cases |
+|--------|-------------|------------|---------------|------------|
+| **Accuracy** | - Balanced classes<br>- Equal error costs | - Easy to understand<br>- Intuitive | - Misleading with imbalanced classes | - Image classification<br>- Balanced spam detection |
+| **Precision** | - Minimize false positives<br>- High FP cost | - Good for avoiding false alarms<br>- Measures positive prediction quality | - Ignores FN<br>- Can be biased | - Medical diagnosis<br>- Fraud detection |
+| **Recall** | - Minimize false negatives<br>- High FN cost | - Finds all positive cases<br>- Sensitive to rare cases | - Ignores FP<br>- Can generate too many alerts | - Disease detection<br>- Critical defect detection |
+| **F1-Score** | - Imbalanced classes<br>- Balance precision/recall | - Combines precision and recall<br>- Good for imbalance | - Ignores TN<br>- Can mask details | - NLP<br>- Recommendation systems |
+| **ROC AUC** | - Evaluate overall performance<br>- Compare models | - Threshold independent<br>- Robust to imbalance | - Can be too optimistic<br>- Complex to interpret | - Credit scoring<br>- Model ranking |
+
+## Quick Selection Guide
+
+### Choose based on context:
+
+1. **Balanced data & simplicity** 
+  - ➡️ Accuracy
+  - Example: Simple classifications
+
+2. **High cost of false positives**
+  - ➡️ Precision
+  - Example: Medical diagnosis (avoid unnecessary treatments)
+
+3. **High cost of false negatives**
+  - ➡️ Recall
+  - Example: Cancer detection (don't miss cases)
+
+4. **Imbalanced data**
+  - ➡️ F1-Score or ROC AUC
+  - Example: Fraud detection (few positive cases)
+
+5. **Model comparison**
+  - ➡️ ROC AUC
+  - Example: Best model selection
+
+### Practical Rules:
+
+- **Medical/Health**: Favor Recall
+ - Critical to not miss positive cases
+ - False negatives are very costly
+
+- **Finance/Fraud**: Balance Precision/Recall (F1)
+ - Need to catch fraud without too many false alarms
+ - Both types of errors are costly
+
+- **Marketing**: ROC AUC for scoring
+ - Good for ranking and probability estimates
+ - Compare different models' performance
+
+- **Industrial Production**: Precision
+ - Quality control
+ - Minimize false alarms
+
+### Common Values Interpretation:
+
+| Metric | Poor | Acceptable | Good | Excellent |
+|--------|------|------------|------|-----------|
+| Accuracy | < 0.6 | 0.6 - 0.7 | 0.7 - 0.8 | > 0.8 |
+| Precision | < 0.5 | 0.5 - 0.7 | 0.7 - 0.9 | > 0.9 |
+| Recall | < 0.5 | 0.5 - 0.7 | 0.7 - 0.9 | > 0.9 |
+| F1-Score | < 0.5 | 0.5 - 0.7 | 0.7 - 0.8 | > 0.8 |
+| ROC AUC | < 0.6 | 0.6 - 0.7 | 0.7 - 0.8 | > 0.8 |
+
+### Selection Formula:
+
+1. **If balanced_classes and simple_problem**:
+  - Use Accuracy
+
+2. **If imbalanced_classes**:
+  ```python
+  if cost_of_false_positives > cost_of_false_negatives:
+      use_precision()
+  elif cost_of_false_negatives > cost_of_false_positives:
+      use_recall()
+  else:
+      use_f1_score()
