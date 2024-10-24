@@ -76,14 +76,14 @@ Process to find the best-fitting line:
 ### Score (R-squared)
 The score, also known as the coefficient of determination or R-squared (R²), measures how well the model fits the data.
 
-```
+``` python
 Range: 0 ≤ R² ≤ 1
 R² close to 1: The model explains a large portion of the variability in the data
 R² close to 0: The model explains little of the variability in the data
 ```
 
 #### Interpretation:
-```
+``` python
 R² = 0.75: 75% of the variability in Y is explained by X
 R² = 0.50: 50% of the variability in Y is explained by X
 R² = 0.90: 90% of the variability in Y is explained by X
